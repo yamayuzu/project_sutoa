@@ -4,14 +4,23 @@
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
     <head>
         <style>
+            .flex-container {
+                display: flex;   
+        }
             .box {
-                display: flex;
+                width: 50px;
+                height: 70px;
+                margin: 25px;
+                padding: 25px;
+                border:3px #0C1B33;
+                border-style: dotted;
         }
         </style>
     </head>
 </head>
 <body>
 <h1>オンラインストア</h1>
+
 <center>
     <form method="POST" action="search.php">
         <div>
@@ -21,17 +30,27 @@
         <input type="hidden" name="h" value="$search">
     </form>
 </center>
+
 <br>
 <br>
+
+<div class="flex-container">
+<div class = "box" style="flex-grow: 7.5;">
 <form method="POST" action="select.php">
         <input type="submit" value="商品一覧">
         <input type="hidden" name="h" value="$select">
     </form>
+<br>
+<form method="POST" action="search.php"> 
+    <input type="submit" value="文房具">
+    <input type="hidden" name="h" value="$search">
+</form>
 </div>
 
-<div class="box">
-    <div>出品したい方はこちら→</div>
+<div class="box" style="flex-grow: 2.5;">
+    <div>出品したい方はこちら↓</div>
     <a href="syuppin.html">出品</a>
+</div>
 </div>
 
 </body>

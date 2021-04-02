@@ -18,13 +18,16 @@ try {
     $re = $dbh->query("SELECT * FROM sutoa");
     while($kekka = $re->fetch()) {
         print "<div class='box'>";
-        print "No." ;
         print $kekka[0];                               // $re　の中身を表示します。
-        print " ";
-        print $kekka[1];
-        print ":";
-        print $kekka[2];
         print "<br>";
+        print $kekka[1];
+        print "<br>";
+        print "￥";
+        print $kekka[2];
+        print "     ";
+        print $kekka[3];
+        print $kekka[4];
+
         print "</div>";
     }
 
