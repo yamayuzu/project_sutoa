@@ -24,10 +24,10 @@
 <center>
     <form method="POST" action="search.php">
         <div>
-        <input type="text" name="message" size="70">
+        <input type="text" name="search" size="70">
         </div>
         <input type="submit" value="検索">
-        <input type="hidden" name="h" value="$search">
+        <input type="hidden" name="h" value="search">
     </form>
 </center>
 
@@ -41,12 +41,24 @@
         <input type="hidden" name="h" value="$select">
     </form>
 <br>
-<form method="POST" action="search.php"> 
+<form method="POST" action="shiborikomi.php"> 
     <input type="submit" value="文房具">
-    <input type="hidden" name="h" value="$search">
+    <input type="hidden" name="h" value="文房具">
+</form>
+
+<form method="POST" action="shiborikomi.php"> 
+    <input type="submit" value="服">
+    <input type="hidden" name="h" value="服">
+</form>
+<form method="POST" action="shiborikomi.php"> 
+    <input type="submit" value="書籍">
+    <input type="hidden" name="h" value="書籍">
+</form>
+<form method="POST" action="shiborikomi.php"> 
+    <input type="submit" value="その他">
+    <input type="hidden" name="h" value="その他">
 </form>
 </div>
-
 <div class="box" style="flex-grow: 2.5;">
     <div>出品したい方はこちら↓</div>
     <a href="syuppin.html">出品</a>

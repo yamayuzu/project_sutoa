@@ -14,7 +14,6 @@
     </style>
 </head>
 <body>
-
 <?php 
 /* Connect to a MySQL database using driver invocation */
 require_once('db_info.php');
@@ -24,22 +23,21 @@ try {
     $dbh->setAttribute(PDO::ATTR_ERRMODE,PDO::ERRMODE_EXCEPTION);
     
     // この下にプログラムを書きましょう。
-    $re = $dbh->query("SELECT * FROM sutoa");
-    while($kekka = $re->fetch()) {
+    $d = $_POST["h"];
+    $aa = $dbh->query("SELECT * FROM sutoa WHERE syurui LIKE '$d'");
+    while($kekka = $aa->fetch()) {
         print "<div class='box'>";
-        print $kekka[0];    
-        print "<br>";                           // $re　の中身を表示します。
+        print $kekka[0];
+        print "<br>";
         print $kekka[1];
+        print "<br>";
         print "￥";
         print $kekka[2];
         print ",,,,,,";
         print $kekka[3];
         print ",,,,,,";
         print $kekka[4];
-
-        print "</div>";
     }
-
 
 } catch (PDOException $e) {
     echo 'Connection failed: ' . $e->getMessage();
