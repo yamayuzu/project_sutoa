@@ -2,36 +2,52 @@
 <html>
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <style>
+        .box {
+                width: 50px;
+                height: 70px;
+                margin: 25px;
+                padding: 25px;
+                border:3px #0C1B33;
+                border-style: dotted;
+        }
+    </style>
 </head>
 <body>
+    <div class = "box" style="flex-grow: 7.5;">
+        <form method="POST" action="insert.php">
+            <div>
+            商品名<input type="text" name="namae" size=50>
+            </div>
+            <div>
+            値段<input type="text" name="nedan" size=50>
+            </div>
+            <div>
+            ＵＲＬ<input type="text" name="url" size=50>
+            </div>
+            <div>
 
-    <form method="POST" action="insert.php">
-        <div>
-        商品名<input type="text" name="namae" size=50>
-        </div>
-        <div>
-        値段<input type="text" name="nedan" size=50>
-        </div>
-        <div>
-        ＵＲＬ<input type="text" name="url" size=50>
-        </div>
-        <div>
-
-        種類
-        <input type="radio" name="syurui" value="文房具">文房具
-        <br>
-        <input type="radio" name="syurui" value="服">服
-        <br>
-        <input type="radio" name="syurui" value="書籍">書籍
-        <br>
-        <input type="radio" name="syurui" value="その他">その他
-        </div>
-        
-        <div>
-        詳細<input type="text" name="syousai" size=50>
-        </div>
-        <input type="submit" value="出品">
-    </form>
-
+            種類
+            
+            <input type="radio" name="syurui" value="文房具">文房具
+            <input type="radio" name="syurui" value="服">服
+            <input type="radio" name="syurui" value="書籍">書籍
+            <input type="radio" name="syurui" value="食品">食品
+            <input type="radio" name="syurui" value="その他">その他
+            </div>
+            
+            <div>
+            詳細<input type="text" name="syousai" size=50>
+            </div>
+            <input type="submit" value="出品">
+        </form>
+    </div>
+    <div class="box" style="flex-grow: 2.5;">
+        <h3>注意！！</h3>
+        ・正確な情報を書くこと。
+        ・値段は半角で入力すること。
+        ・ＵＲＬは既存のものを貼り付けること。
+        ・長すぎるＵＲＬは「ref=」より後の文字列を消して貼り付けてください。「ref」を含む）
+    </div>
 </body>
 </html>

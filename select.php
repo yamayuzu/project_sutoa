@@ -29,7 +29,9 @@ try {
         print "<div class='box'>";
         print $kekka[0];    
         print "<br>";                           // $re　の中身を表示します。
-        print $kekka[1];
+        print '<a href="'.$kekka[1].'">'.$kekka[0].'</a>';
+        //print "$kekka[1]";
+        //print '<a href="http://google.co.jp">'.$rec['id'].'</a>';
         print "￥";
         print $kekka[2];
         print ",,,,,,";
