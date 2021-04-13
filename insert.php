@@ -3,6 +3,9 @@
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
     <style>
+        body {
+                background-color:#F7FFF6;
+            }
     </style>
 </head>
 <body>
@@ -30,6 +33,6 @@ try {
 }
 
 ?>
-
+<a href="http://127.0.0.1:8080/project_sutoa">ホームへ</a>
 </body>
 </html>
